@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Clatrobe00/README-generator/issues"
   },
-  "homepage": "https://github.com/Clatrobe00/README-generator#readme"
+  "homepage": "https://github.com/Clatrobe00/README-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
 }
