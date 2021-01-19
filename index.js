@@ -49,7 +49,7 @@ class README {
     this.test = answers.test;
   }
   create () {
-      console.log(`
+      const template = `
       # ${this.title}
 
       ## Description
@@ -87,13 +87,19 @@ class README {
       ${this.test}
       
       ## Questions
-      `)
+      `
+      return template
   }
 }
 
-// TODO: Create a function to write README file
-//function writeToFile(answers) 
-
+const handleAnswers = (answers) => {
+  const readme = new README(answers)
+  const readmeLayout = readme.create()
+  console.log(readmeLayout);
+  fs.writeFile('test.md', readmeLayout, (err) =>
+     err ? console.error(err) : console.log('Success!')
+  );
+}
 // TODO: Create a function to initialize app
 //function init() {}
 
@@ -103,8 +109,5 @@ class README {
 inquirer
   .prompt(questions)
   .then(answers => {
-  const test = new README(answers);
-  test.create();
-
-
-});
+    handleAnswers(answers)
+  });
