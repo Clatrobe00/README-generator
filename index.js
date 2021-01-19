@@ -1,12 +1,7 @@
-// create question object
-// create prompt handler function and answer handler function
-// include fs to write answers in MD file
-// build (class/constructor? )
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-
-// TODO: Create an array of questions for user input
+// Inquire Questions Array
 const questions = [{
   type: 'input',
   name: 'projectTitle',
@@ -48,6 +43,7 @@ const questions = [{
   message: 'Enter your github'
 }]
 
+//README class constructor
 class README {
   constructor(answers) {
     this.title = answers.projectTitle;
@@ -113,14 +109,13 @@ const handleAnswers = (answers) => {
      err ? console.error(err) : console.log('Success!')
   );
 }
-// TODO: Create a function to initialize app
-//function init() {}
 
-// Function call to initialize app
-//init();
-
-inquirer
+function init() {
+  inquirer
   .prompt(questions)
   .then(answers => {
     handleAnswers(answers)
   });
+}
+
+init();
