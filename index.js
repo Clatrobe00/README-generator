@@ -37,7 +37,16 @@ const questions = [{
   name: 'test',
   message: 'Enter test information for your application'
 },
-]
+{
+  type: 'input',
+  name: 'email',
+  message: 'Enter a contact email address for your repo'
+},
+{
+  type: 'input',
+  name: 'github',
+  message: 'Enter your github'
+}]
 
 class README {
   constructor(answers) {
@@ -47,47 +56,51 @@ class README {
     this.usage = answers.usage;
     this.contribution = answers.contribution;
     this.test = answers.test;
+    this.email = answers.email;
+    this.github = answers.github;
   }
   create () {
-      const template = `
-      # ${this.title}
+      const template = 
+`# ${this.title}
 
-      ## Description
+## Description
 
-      ${this.description}
+${this.description}
       
-      ## Table of Contents 
+## Table of Contents 
       
-      * [Installation](#installation)
+* [Installation](#installation)
       
-      * [Usage](#usage)
+* [Usage](#usage)
       
-      * [Contributing](#contributing)
+* [Contributing](#contributing)
       
-      * [Tests](#tests)
+* [Tests](#tests)
       
-      * [Questions](#questions)
+* [Questions](#questions)
       
-      ## Installation
+## Installation
 
-      ${this.install}
+${this.install}
       
-      ## Usage
+## Usage
 
-      ${this.usage}
+${this.usage}
         
-      ## Contributing
+## Contributing
 
-      ${this.contribution}
+${this.contribution}
       
-      ## Tests
+## Tests
       
-      To run tests, run the following command:
+To run tests, run the following command:
 
-      ${this.test}
+${this.test}
       
-      ## Questions
-      `
+## Questions
+
+For questions regarding this repo contact me at ${this.email} or visit my repository at ${this.github}`
+    
       return template
   }
 }
