@@ -96,7 +96,7 @@ const handleAnswers = (answers) => {
   const readme = new README(answers)
   const readmeLayout = readme.create()
   console.log(readmeLayout);
-  fs.writeFile('test.md', readmeLayout, (err) =>
+  fs.writeFile(`${answers.projectTitle}.md`, readmeLayout, (err) =>
      err ? console.error(err) : console.log('Success!')
   );
 }
