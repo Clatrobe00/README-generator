@@ -39,7 +39,57 @@ const questions = [{
 },
 ]
 
+class README {
+  constructor(answers) {
+    this.title = answers.projectTitle;
+    this.description = answers.description;
+    this.install = answers.installationInstructions;
+    this.usage = answers.usage;
+    this.contribution = answers.contribution;
+    this.test = answers.test;
+  }
+  create () {
+      console.log(`
+      # ${this.title}
 
+      ## Description
+
+      ${this.description}
+      
+      ## Table of Contents 
+      
+      * [Installation](#installation)
+      
+      * [Usage](#usage)
+      
+      * [Contributing](#contributing)
+      
+      * [Tests](#tests)
+      
+      * [Questions](#questions)
+      
+      ## Installation
+
+      ${this.install}
+      
+      ## Usage
+
+      ${this.usage}
+        
+      ## Contributing
+
+      ${this.contribution}
+      
+      ## Tests
+      
+      To run tests, run the following command:
+
+      ${this.test}
+      
+      ## Questions
+      `)
+  }
+}
 
 // TODO: Create a function to write README file
 //function writeToFile(answers) 
@@ -50,38 +100,11 @@ const questions = [{
 // Function call to initialize app
 //init();
 
-//# README Generator
-
-//## Description
-
-//## Table of Contents 
-
-//* [Installation](#installation)
-
-//* [Usage](#usage)
-
-//* [Contributing](#contributing)
-
-//* [Tests](#tests)
-
-//* [Questions](#questions)
-
-//## Installation
-
-//## Usage
-  
-//## Contributing
-
-//## Tests
-
-//To run tests, run the following command:
-
-//## Questions
-
-
 inquirer
   .prompt(questions)
   .then(answers => {
-  console.log(answers);
+  const test = new README(answers);
+  test.create();
+
 
 });
