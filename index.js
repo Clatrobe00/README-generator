@@ -2,7 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const Choice = require('inquirer/lib/objects/choice');
 const Choices = require('inquirer/lib/objects/choices');
-import { README } from './utils/generateMarkdown.js';
+const README = require('./utils/generateMarkdown.js')
 
 // Inquire Questions Array
 const questions = [{
