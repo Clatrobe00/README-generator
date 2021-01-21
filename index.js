@@ -1,5 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const Choice = require('inquirer/lib/objects/choice');
+const Choices = require('inquirer/lib/objects/choices');
 
 // Inquire Questions Array
 const questions = [{
@@ -16,6 +18,12 @@ const questions = [{
   type: 'input',
   name: 'installationInstructions',
   message: 'Enter the instructions for installing your application'
+},
+{
+  type: 'list',
+  name: 'license',
+  message: 'Select the license you would prefer for your application',
+  choices: ['Apache2.0', 'BSD 2-Clause']
 },
 {
   type: 'input',
@@ -52,6 +60,7 @@ class README {
     this.usage = answers.usage;
     this.contribution = answers.contribution;
     this.test = answers.test;
+    this.license = answers.license;
     this.email = answers.email;
     this.github = answers.github;
   }
@@ -95,14 +104,28 @@ ${this.test}
       
 ## Questions
 
-For questions regarding this repo contact me at ${this.email} or visit my repository at ${this.github}`
+For questions regarding this repo contact me at ${this.email} or visit my repository at ${this.github}
+
+## License`
     
       return template
+  }
+  renderLicenseBadge(license) {
+    switch (license) {
+      case "Apache2.0": 
+        console.log("It's Apache!");
+        break;
+    
+      default:
+        console.log('Guess it was something else.');
+        break;
+    }
   }
 }
 
 const handleAnswers = (answers) => {
   const readme = new README(answers)
+  readme.renderLicenseBadge(answers.license);
   const readmeLayout = readme.create()
   console.log(readmeLayout);
   fs.writeFile(`${answers.projectTitle}.md`, readmeLayout, (err) =>
