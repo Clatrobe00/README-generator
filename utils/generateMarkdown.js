@@ -87,13 +87,13 @@ ${this.licenseInfo[2]}`
     
     THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.`,
 
-    CC0: `<${this.title}> - <DESCRIPTION>
-    Written in <2021> by <AUTHOR NAME> <${this.email}>
+    CC0: `${this.title} - <DESCRIPTION>
+    Written in 2021 by <AUTHOR NAME> <${this.email}>
     [other author/contributor lines as appropriate]
     To the extent possible under law, the author(s) have dedicated all copyright and related and neighboring rights to this software to the public domain worldwide. This software is distributed without any warranty.
     You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.`,
 
-    MIT: `Copyright <2021> <${this.email}>
+    MIT: `Copyright 2021 ${this.email}
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
     
@@ -123,7 +123,7 @@ ${this.licenseInfo[2]}`
         licenseSection = this.licenseSectionObj.CC0
         return [licenseBadge, licenseLink, licenseSection];
       case "MIT": 
-        licenseBadge = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+        licenseBadge = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
         licenseLink = "https://opensource.org/licenses/MIT";
         licenseSection = this.licenseSectionObj.MIT
         return [licenseBadge, licenseLink, licenseSection];

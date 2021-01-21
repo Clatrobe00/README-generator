@@ -1,8 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const Choice = require('inquirer/lib/objects/choice');
-const Choices = require('inquirer/lib/objects/choices');
-const README = require('./utils/generateMarkdown.js')
+const README = require('./utils/generateMarkdown.js');
 
 // Inquire Questions Array
 const questions = [{
@@ -53,8 +51,8 @@ const questions = [{
 }]
 
 const handleAnswers = (answers) => {
-  const readme = new README(answers)
-  const readmeLayout = readme.create()
+  const readme = new README(answers);
+  const readmeLayout = readme.create();
   console.log(readmeLayout);
   fs.writeFile(`${answers.projectTitle}.md`, readmeLayout, (err) =>
      err ? console.error(err) : console.log('Success!')
@@ -65,7 +63,7 @@ function init() {
   inquirer
   .prompt(questions)
   .then(answers => {
-    handleAnswers(answers)
+    handleAnswers(answers);
   });
 }
 
