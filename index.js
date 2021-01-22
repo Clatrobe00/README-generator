@@ -32,7 +32,7 @@ const questions = [{
 {
   type: 'input',
   name: 'contribution',
-  message: 'Enter guidlines for contributing to your application'
+  message: 'Enter guidelines for contributing to your application'
 },
 {
   type: 'input',
@@ -53,7 +53,6 @@ const questions = [{
 const handleAnswers = (answers) => {
   const readme = new README(answers);
   const readmeLayout = readme.create();
-  console.log(readmeLayout);
   fs.writeFile(`${answers.projectTitle}.md`, readmeLayout, (err) =>
      err ? console.error(err) : console.log('Success!')
   );

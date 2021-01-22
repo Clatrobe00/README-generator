@@ -1,7 +1,7 @@
 //README class constructor
 class README {
   constructor(answers) {
-    this.title = answers.projectTitle;
+    this.title = answers.projectTitle.replace(" ", "-");
     this.description = answers.description;
     this.install = answers.installationInstructions;
     this.usage = answers.usage;
@@ -33,6 +33,8 @@ ${this.description}
 * [Tests](#tests)
       
 * [Questions](#questions)
+
+* [License](#license)
       
 ## Installation
 
