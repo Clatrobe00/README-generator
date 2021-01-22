@@ -27,6 +27,9 @@ This section would contain instructions on installing the application. In this c
 You are free to use this application for any project.
 
 To run this application, use the command `node index.js` to initialize.
+
+When initialized, the user will be met with a series of prompts for information about their project. Once the user has made all their inputs, the application will automatically write a README.md and save it in the same folder.
+
         
 ## Contributing
 

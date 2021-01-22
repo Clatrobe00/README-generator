@@ -4,7 +4,7 @@ https://opensource.org/licenses/MIT
 
 ## Description
 
-This is my project description
+This is the description for my application.
       
 ## Table of Contents 
       
@@ -22,25 +22,25 @@ This is my project description
       
 ## Installation
 
-Here is how you can install this incredible application
+Here are some instructions on installing this application.
       
 ## Usage
 
-Here is how you can use all the incredible features found in this application
+Here is how you can use all the incredible features this application has to offer.
         
 ## Contributing
 
-Here is how you can contribute to this amazing body of work.
+Here is how you can contribute to this project.
       
 ## Tests
       
 To run tests, run the following command:
 
-Here is how you can test this application
+Here is how you can test this code.
       
 ## Questions
 
-For questions regarding this repo contact me at sample@email.com or visit my repository at https://github.com/Clatrobe00
+For questions regarding this repo contact me at charlie.bateman117@gmail.com or visit my repository at https://github.com/Clatrobe00/README-generator
 
 ## License
 
